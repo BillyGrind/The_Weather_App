@@ -1,15 +1,14 @@
-export function addImage(cityName){
+export async function addImage(cityName){
 
-    let fetchImage = (cityName) => fetch("https://api.unsplash.com/search/photos?&query=" + cityName );
+    let fetchImage = async (cityName) => await fetch("https://api.unsplash.com/search/photos?client_id=QEvoym4ayF4WEzX203pycsVjzYphQPzjst_fURPe3hw&query=" + cityName );
 
     fetchImage(cityName)
     .then((response) => response.json())
-    .then((json) => {
-        
-        console.log(json);
+    .then((data) => {
+        // let bckImg = document.querySelector(".weather-container");
+        let imageUrl = data.results[0].urls.regular;
+        document.body.style.backgroundImage=`url(${imageUrl})`;
+        // console.log(imageUrl); 
     })
-
-
-
 
 }

@@ -2,10 +2,11 @@
 
 import { addImage } from "./addImage.js";
 
+
 export async function weatherApi(){
-    let inputValue = document.getElementsByClassName("weather-input-text")[0];
-    let cityValue = inputValue.value;
-   
+
+    let cityValue =document.querySelector(".weather-input-text").value;
+        
     try{
 
 
@@ -28,15 +29,15 @@ export async function weatherApi(){
                 
             let weatherContainer = document.getElementsByClassName("weather-container")[0];
             let newDiv = document.createElement("div");
-            let weatherJson = json;
             let paragraph = document.createElement("p");
-            paragraph.textContent = weatherJson.list[i * 8].weather.main;
-            paragraph.textContent = weatherJson.list[i * 8].main.temp;
-            paragraph.textContent = weatherJson.list[i *8].dt_text;
+            // paragraph.textContent = json.list[i * 8].weather[0].main;
+            paragraph.textContent = json.list[i * 8].main.temp;
+            // paragraph.textContent = json.list[i *8].dt_text;
             newDiv.appendChild(paragraph);
             weatherContainer.appendChild(newDiv);
 
             console.log(json);
+            // console.log( json.list[i * 8].weather.main);
             }
 
         })
