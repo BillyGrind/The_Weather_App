@@ -7,6 +7,9 @@ export async function autoComplete() {
     let inputFieldValue = inputField.value;
     console.log(inputFieldValue);
 
+    // essayer cet api https://geocoding-api.open-meteo.com/v1/search?name=Bruss&count=5
+    // voir aussi geo names
+
     let options = {
       method: "GET",
       headers: { "X-Api-Key": "h23V9pmmyHz5tHCCKQZenjQa2gAIO06oGNlNhXgX" },
@@ -15,17 +18,13 @@ export async function autoComplete() {
     let url =
       "https://api.api-ninjas.com/v1/city?name=" + inputFieldValue + "&limit=5";
     let cityList = document.querySelector(".weather-list-city");
-    cityList.innerHTML = "";
     fetch(url, options)
       .then((response) => response.json())
       .then((json) => {
+        cityList.innerHTML = "";
         for (let i = 0; i < 5; i++) {
           let cityElementList = document.createElement("li");
           cityElementList.textContent = json[i].name;
-          //   cityElementList.addEventListener("click", () => {
-          //     let cityElementListValue = cityElementList.value;
-          //     console.log(cityElementListValue);
-          //   });
           cityList.appendChild(cityElementList);
         }
       });

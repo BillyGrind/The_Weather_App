@@ -1,4 +1,7 @@
 import { addImage } from "./addImage.js";
+import { createChart } from "./createChart.js";
+
+//async / await
 
 export async function weatherApi() {
   let cityValue = document.querySelector(".weather-input-text").value;
@@ -50,9 +53,11 @@ export async function weatherApi() {
 
               weatherContainer.appendChild(newDiv);
 
-              console.log(json);
+              // console.log(json);
               // console.log( json.list[i * 8].weather.main);
             }
+            // console.log(json);
+            createChart(json);
           });
 
         addImage(cityValue);
