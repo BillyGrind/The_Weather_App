@@ -5,9 +5,9 @@ export async function addImage(cityName){
     fetchImage(cityName)
     .then((response) => response.json())
     .then((data) => {
-        // let bckImg = document.querySelector(".weather-container");
+        let bckImg = document.querySelector(".weather-container");
         let imageUrl = data.results[0].urls.regular;
-        document.body.style.backgroundImage=`url(${imageUrl})`;
+        bckImg.style.backgroundImage=`url(${imageUrl})`;
         // console.log(imageUrl); 
     })
 

@@ -35,8 +35,9 @@ export async function weatherApi() {
           .then((json) => {
             for (let i = 0; i < 5; i++) {
               let weatherContainer =
-                document.getElementsByClassName("weather-container")[0];
+                document.getElementsByClassName("weather-card-container")[0];
               let newDiv = document.createElement("div");
+              newDiv.classList.add("weather-card");
 
               let paragraphTemp = document.createElement("p");
               paragraphTemp.textContent = json.list[i * 8].main.temp;
@@ -48,15 +49,10 @@ export async function weatherApi() {
 
               let paragraphDate = document.createElement("p");
               paragraphDate.textContent = json.list[i * 8].dt_txt;
-              // console.log(paragraphDate.textContent);
               newDiv.appendChild(paragraphDate);
 
               weatherContainer.appendChild(newDiv);
-
-              // console.log(json);
-              // console.log( json.list[i * 8].weather.main);
             }
-            // console.log(json);
             createChart(json);
           });
 

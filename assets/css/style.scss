@@ -1,9 +1,16 @@
+$Mindaro: #daff7d;
+$LightGreen: #b2ef9b;
+$CoolGray: #8c86aa;
+$RoyalPurple: #81559b;
+$Eminence: #7e3f8f;
+
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
+
 body {
   font-family: "Merriweather Sans", sans-serif;
-  background-color: #daff7d;
+  background-color: $Mindaro;
   font-size: 18px;
-  color: #7e3f8f;
+  color: $Eminence;
 }
 
 .weather-container {
@@ -49,7 +56,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #b2ef9b;
+  background-color: $LightGreen;
   color: #81559b;
   font-weight: 700;
   padding: 20px;
@@ -62,4 +69,4 @@ h1 {
   margin: 20px auto;
   padding: 10px;
   border-radius: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
