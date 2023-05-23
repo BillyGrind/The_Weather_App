@@ -48,7 +48,7 @@ export async function weatherApi() {
               newDiv.appendChild(paragraphMain);
 
               let paragraphDate = document.createElement("p");
-              paragraphDate.textContent = json.list[i * 8].dt_txt;
+              paragraphDate.textContent = json.list[i * 8].dt_txt.split(" ")[0];
               newDiv.appendChild(paragraphDate);
 
               weatherContainer.appendChild(newDiv);

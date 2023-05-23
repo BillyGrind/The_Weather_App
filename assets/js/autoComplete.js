@@ -5,10 +5,6 @@ export async function autoComplete() {
 
   inputField.addEventListener("input", () => {
     let inputFieldValue = inputField.value;
-    console.log(inputFieldValue);
-
-    // essayer cet api https://geocoding-api.open-meteo.com/v1/search?name=Bruss&count=5
-    // voir aussi geo names
 
     let options = {
       method: "GET",

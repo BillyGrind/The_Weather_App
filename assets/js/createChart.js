@@ -1,10 +1,9 @@
 export async function createChart(obj) {
-  
   console.log(obj);
 
   const barCanvas = document.getElementById("barCanvas");
 
-  new Chart(barCanvas, {
+  await new Chart(barCanvas, {
     type: "line",
     data: {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
