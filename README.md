@@ -19,3 +19,7 @@ Pour la géolocalisation :
 ## Github Page
 
 - https://billygrind.github.io/The_Weather_App/
+
+## Screenshots
+
+![App Screenshot](assets/src/printscreen2.jpg)
