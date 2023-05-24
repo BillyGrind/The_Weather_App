@@ -13,6 +13,7 @@ Créer une application qui permet de récupérer une ville et de donner les info
 
 Pour la météo :
 - https://api.openweathermap.org/data/2.5
+
 Pour la géolocalisation : 
 - https://api.api-ninjas.com/v1/
 
