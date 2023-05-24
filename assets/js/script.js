@@ -1,5 +1,10 @@
 import { weatherInput } from "./weatherInput.js";
 import { autoComplete } from "./autoComplete.js";
+import { refresh } from "./refresh.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    refresh();
+  });
 
 weatherInput();
 autoComplete();
@@ -11,8 +16,6 @@ autoComplete();
 //TO DO
 //---------------------
 // README
-// refresh a chaque enter
-// répare bug addition card
 
 
 //DO
@@ -21,6 +24,8 @@ autoComplete();
 // ajouter img temp dans card
 // Terminer de taper infos dans chart
 // autoComplete click + finaliser beauté
+// refresh a chaque enter
+// répare bug addition card
 
 //MAYBE
 //---------------
