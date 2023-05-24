@@ -1,4 +1,5 @@
 import { weatherApi } from "./weatherApi.js";
+import { refresh } from "./refresh.js";
 
 export function weatherInput() {
   let weatherContainer = document.querySelector(".weather-container");
@@ -11,11 +12,13 @@ export function weatherInput() {
 
   buttonSubmit.addEventListener("click", async () => {
     await weatherApi();
+    refresh();
   });
 
   inputField.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
       await weatherApi();
+      refresh();
     }
   });
 }

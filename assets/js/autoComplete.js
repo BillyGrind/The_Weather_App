@@ -4,6 +4,7 @@ export async function autoComplete() {
   let inputField = document.querySelector(".weather-input-text");
   inputField.addEventListener("input", () => {
     let inputFieldValue = inputField.value;
+    let cityList = document.querySelector(".weather-list-city");
 
     let options = {
       method: "GET",
@@ -12,7 +13,6 @@ export async function autoComplete() {
     };
     let url =
       "https://api.api-ninjas.com/v1/city?name=" + inputFieldValue + "&limit=5";
-    let cityList = document.querySelector(".weather-list-city");
     fetch(url, options)
       .then((response) => response.json())
       .then((json) => {
@@ -24,6 +24,7 @@ export async function autoComplete() {
             let cityElementListValue = cityElementList.textContent;
             inputField.value=cityElementListValue;
             console.log(cityElementListValue);
+            cityList.innerHTML="";
           })
           cityList.appendChild(cityElementList);
         }
