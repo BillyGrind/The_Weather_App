@@ -1,4 +1,9 @@
 export async function createChart(obj) {
+  let weatherChartContainer = document.querySelector(".weather-chart-container");
+  let content = `
+  <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+  `;
+  weatherChartContainer.innerHTML += content;
   console.log(obj);
 
   const barCanvas = document.getElementById("barCanvas");
