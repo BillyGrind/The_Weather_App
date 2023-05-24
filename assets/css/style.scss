@@ -1,0 +1,85 @@
+$Mindaro: #daff7d;
+$LightGreen: #b2ef9b;
+$CoolGray: #8c86aa;
+$RoyalPurple: #81559b;
+$Eminence: #7e3f8f;
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap");
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  background-color: $LightGreen;
+  font-size: 18px;
+  color: $Eminence;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  // height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  background-color: #7e3f8f;
+  color: #daff7d;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.weather-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 20px;
+  background-color: #daff7d;
+  border-radius: 10px;
+  padding: 40px 60px;
+}
+
+.weather-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $LightGreen;
+  color: #81559b;
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.weather-chart-container {
+  display: none;
+  background-color: #daff7d;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#barCanvas{
+  // background-color: #81559b;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+
+ul{
+    text-decoration: none;
+}
