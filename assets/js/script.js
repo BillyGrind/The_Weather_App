@@ -15,7 +15,7 @@ autoComplete();
 
 //TO DO
 //---------------------
-// README
+
 
 
 //DO
@@ -26,10 +26,9 @@ autoComplete();
 // autoComplete click + finaliser beauté
 // refresh a chaque enter
 // répare bug addition card
+// README
 
 //MAYBE
 //---------------
-// essayer cet api https://geocoding-api.open-meteo.com/v1/search?name=Bruss&count=5
-// voir aussi geo names
 // save dans le localstorage
 // comparaison entre plusieurs villes

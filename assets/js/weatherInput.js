@@ -8,17 +8,15 @@ export function weatherInput() {
 
   let inputField = document.querySelector(".weather-input-text");
 
-  // add press enter and submit
-
   buttonSubmit.addEventListener("click", async () => {
-    await weatherApi();
     refresh();
+    await weatherApi();
   });
 
   inputField.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
-      await weatherApi();
       refresh();
+      await weatherApi();  
     }
   });
 }
