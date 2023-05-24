@@ -21,8 +21,9 @@ autoComplete();
 // README
 
 // répare bug addition card
-// ajouter img temp dans card
+
 
 //DO
 //---------------------
 // créer Github pages
+// ajouter img temp dans card

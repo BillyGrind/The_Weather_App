@@ -40,15 +40,28 @@ export async function weatherApi() {
               newDiv.classList.add("weather-card");
 
               let paragraphTemp = document.createElement("p");
-              paragraphTemp.textContent = json.list[i * 8].main.temp;
+              let temperature = Math.round(json.list[i * 8].main.temp);
+              paragraphTemp.textContent = temperature.toString()+" °C";
               newDiv.appendChild(paragraphTemp);
+
+              let paragraphMainIcon = document.createElement("div");
+              let iconName = json.list[i * 8].weather[0].icon;
+              let iconNameUrl = "https://openweathermap.org/img/w/" + iconName + ".png";
+              let imgElement = document.createElement("img");
+              imgElement.src = iconNameUrl;
+              imgElement.alt = "Weather icon";
+              paragraphMainIcon.appendChild(imgElement);
+              newDiv.appendChild(paragraphMainIcon);
 
               let paragraphMain = document.createElement("p");
               paragraphMain.textContent = json.list[i * 8].weather[0].main;
               newDiv.appendChild(paragraphMain);
 
               let paragraphDate = document.createElement("p");
-              paragraphDate.textContent = json.list[i * 8].dt_txt.split(" ")[0];
+              let date = json.list[i * 8].dt_txt.split(" ")[0];
+              let [year, month, day] = date.split("-");
+              let formattedDate = `${day}-${month}-${year}`;
+              paragraphDate.textContent = formattedDate;
               newDiv.appendChild(paragraphDate);
 
               weatherContainer.appendChild(newDiv);
