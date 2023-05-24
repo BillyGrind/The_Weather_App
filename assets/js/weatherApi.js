@@ -6,7 +6,6 @@ import { createChart } from "./createChart.js";
 export async function weatherApi() {
   let cityValue = document.querySelector(".weather-input-text").value;
 
-  try {
     let fetchCity = (city) =>
       fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -53,9 +52,9 @@ export async function weatherApi() {
               paragraphMainIcon.appendChild(imgElement);
               newDiv.appendChild(paragraphMainIcon);
 
-              let paragraphMain = document.createElement("p");
-              paragraphMain.textContent = json.list[i * 8].weather[0].main;
-              newDiv.appendChild(paragraphMain);
+              // let paragraphMain = document.createElement("p");
+              // paragraphMain.textContent = json.list[i * 8].weather[0].main;
+              // newDiv.appendChild(paragraphMain);
 
               let paragraphDate = document.createElement("p");
               let date = json.list[i * 8].dt_txt.split(" ")[0];
@@ -71,7 +70,5 @@ export async function weatherApi() {
 
         addImage(cityValue);
       });
-  } catch {
-    console.log("error");
-  }
-}
+  } 
+

@@ -22,7 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   margin: 0;
-  height: 100vh;
+  // height: 100vh;
   width: 100vw;
 }
 
@@ -66,10 +66,18 @@ h1 {
 }
 
 .weather-chart-container {
+  display: none;
   background-color: #daff7d;
   margin: 20px auto;
-  // padding: 10px;
+  padding: 10px;
   border-radius: 20px;
+}
+
+#barCanvas{
+  // background-color: #81559b;
+  width: 500px;
+  height: 400px;
+  margin: auto;
 }
 
 ul{

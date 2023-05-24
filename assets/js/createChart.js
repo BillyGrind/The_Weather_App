@@ -1,6 +1,7 @@
 export async function createChart(obj) {
 
   let weatherChartContainer = document.querySelector(".weather-chart-container");
+  weatherChartContainer.style.display="block";
   let content = `
   <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
   `;
@@ -18,24 +19,31 @@ export async function createChart(obj) {
     dateArray.push(formattedDate);
   }
 
-  console.log(obj);
-  console.log(temperatureArray);
+  // console.log(obj);
+  // console.log(temperatureArray);
 
   const barCanvas = document.getElementById("barCanvas");
 
   await new Chart(barCanvas, {
     type: "line",
     data: {
-      labels:  dateArray,
+      labels: dateArray,
       datasets: [
         {
           label: "Température",
           data: temperatureArray,
-          borderWidth: 1,
+          borderWidth: 2,
+          backgroundColor: "#daff7d",
         },
       ],
     },
     options: {
+      title: {
+        display: true,
+        text: "Température des 5 prochains jours",
+        fontColor: "black",
+        fontSize: 18,
+      },
       scales: {
         y: {
           beginAtZero: true,
