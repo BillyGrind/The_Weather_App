@@ -12,10 +12,13 @@ Créer une application qui permet de récupérer une ville et de donner les info
 ## API Reference
 
 Pour la météo :
-- https://api.openweathermap.org/data/2.5
+- https://api.openweathermap.org
 
 Pour la géolocalisation : 
-- https://api.api-ninjas.com/v1/
+- https://api.api-ninjas.com
+
+Pour les images :
+- https://api.unsplash.com
 
 ## Github Page
 
