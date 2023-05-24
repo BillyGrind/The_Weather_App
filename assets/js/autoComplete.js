@@ -2,7 +2,6 @@ import { weatherApi } from "./weatherApi.js";
 
 export async function autoComplete() {
   let inputField = document.querySelector(".weather-input-text");
-
   inputField.addEventListener("input", () => {
     let inputFieldValue = inputField.value;
 
@@ -21,6 +20,11 @@ export async function autoComplete() {
         for (let i = 0; i < 5; i++) {
           let cityElementList = document.createElement("li");
           cityElementList.textContent = json[i].name;
+          cityElementList.addEventListener("click",()=>{
+            let cityElementListValue = cityElementList.textContent;
+            inputField.value=cityElementListValue;
+            console.log(cityElementListValue);
+          })
           cityList.appendChild(cityElementList);
         }
       });

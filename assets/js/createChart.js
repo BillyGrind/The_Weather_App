@@ -34,6 +34,7 @@ export async function createChart(obj) {
           data: temperatureArray,
           borderWidth: 2,
           backgroundColor: "#daff7d",
+          borderColor :"#7e3f8f",
         },
       ],
     },
@@ -41,7 +42,7 @@ export async function createChart(obj) {
       title: {
         display: true,
         text: "Température des 5 prochains jours",
-        fontColor: "black",
+        fontColor: "#7e3f8f",
         fontSize: 18,
       },
       scales: {
